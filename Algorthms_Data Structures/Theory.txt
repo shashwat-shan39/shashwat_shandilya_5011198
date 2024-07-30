@@ -1,0 +1,277 @@
+```````````````````````````````````EXERCISE 1```````````````````````````````````````````````
+
+
+Q1. Explain why data structures and algorithms are essential in handling large inventories.
+
+Sol :
+    Efficient data structures and algorithms are crucial for handling large inventories because
+    they allow for faster data retrieval, insertion, updating, and deletion.
+    This efficiency directly impacts the performance and responsiveness of the inventory management system,
+    especially when dealing with large amounts of data.
+    Good data structures minimize memory usage and optimize the speed of these operations,
+    ensuring that the system can handle high loads and provide quick access to inventory data.
+
+Q2. Discuss the types of data structures suitable for this problem.
+
+Sol :
+    Types of data structures suitable for this problem:
+        ArrayList: Useful for maintaining an ordered list of products.Provides efficient access and modification
+                   at specific indices but can be slow for adding or removing elements in the middle of the list.
+
+        HashMap:   Ideal for key-value pairs where the key is the productId. Provides average O(1)
+                   time complexity for add, update, and delete operations. This is often the best choice for
+                   an inventory management system due to its efficiency in searching and updating records.
+
+        TreeMap:   Maintains the order of keys and provides log(n) time complexity for insertions, updates,
+                   and deletions. Useful if you need sorted data.
+
+
+Time Complexity Analysis:
+
+Add Product:
+
+    Average Case: O(1) - HashMap provides constant-time performance for put operation.
+    Worst Case: O(n) - In case of hash collisions, where n is the number of products in the inventory.
+
+Update Product:
+
+    Average Case: O(1) - Similar to add operation, updating an existing entry is also O(1).
+    Worst Case: O(n) - Due to hash collisions.
+
+Delete Product:
+
+    Average Case: O(1) - HashMap provides constant-time performance for remove operation.
+    Worst Case: O(n) - Due to hash collisions.
+
+`````````````````````````````````````````````` EXERCISE 2 ``````````````````````````````````````````
+
+
+Q1.	Explain Big O notation and how it helps in analyzing algorithms.
+
+Sol:
+    Big O notation is a mathematical concept used to describe the upper bound of an algorithm's time
+    or space complexity as a function of input size. It helps in analyzing the efficiency of algorithms,
+    particularly in terms of their scalability. For example, O(n) indicates that the time required grows
+    linearly with the input size, while O(log n) indicates logarithmic growth.
+
+Q2. Describe the best, average, and worst-case scenarios for search operations.
+
+Sol:
+    Best, Average, and Worst-Case Scenarios:
+
+    Best-case scenario: The minimum time an algorithm takes to complete. For search operations, this might be
+    finding the desired element at the first position.
+
+    Average-case scenario: The expected time an algorithm takes on average, assuming all inputs are equally likely.
+
+    Worst-case scenario: The maximum time an algorithm takes to complete. For search operations,
+    this is usually when the element is not present or at the last position.
+
+Q3. Compare the time complexity of linear and binary search algorithms.
+
+Sol:
+    Time Complexity:
+
+    Linear Search: O(n) in all cases (best, average, worst), where n is the number of products.
+    This is because, in the worst case, we may need to examine all elements.
+
+    Binary Search: O(log n) in the average and worst cases, and O(1) in the best case.it requires
+    the array to be sorted and allows for faster searching due to its divide-and-conquer approach.
+
+Q4. Discuss which algorithm is more suitable for your platform and why.
+
+Sol:
+    For an e-commerce platform where search speed is critical, binary search is more suitable due to its
+    logarithmic time complexity, provided that the array of products is sorted. However, if the list is
+    frequently updated or unsorted, the overhead of sorting for binary search may outweigh its benefits,
+    making linear search a better choice for dynamic datasets.
+
+    Choosing the right search algorithm depends on the specific use case and data characteristics.
+    Binary search is optimal for sorted datasets and large arrays, while linear search can be useful for
+    unsorted, small datasets or when frequent updates occur.
+
+````````````````````````````EXERCISE 3````````````````````````````````````
+
+
+
+Q1. Explain different sorting algorithms (Bubble Sort, Insertion Sort, Quick Sort, Merge Sort).
+
+Sol:
+    Bubble Sort:-
+    Bubble Sort is a simple comparison-based sorting algorithm. It repeatedly steps through the list,
+    compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated
+    until the list is sorted. The algorithm gets its name because smaller elements "bubble" to the top of the list.
+
+    Time Complexity: O(n²)
+    Space Complexity: O(1)
+
+    Insertion Sort:-
+    Insertion Sort builds the sorted array one item at a time. It takes each element from the unsorted list
+    and places it in the correct position in the sorted list.
+
+    Time Complexity: O(n²)
+    Space Complexity: O(1)
+
+    Quick Sort
+    Quick Sort is a highly efficient sorting algorithm that uses a divide-and-conquer approach. It works by
+    selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays,
+    according to whether they are less than or greater than the pivot.
+
+    Time Complexity:
+    Average case: O(n log n)
+    Worst case: O(n²) (when the pivot is the smallest or largest element)
+    Space Complexity: O(log n) due to the recursive call stack
+
+    Merge Sort
+    Merge Sort is a divide-and-conquer algorithm that divides the list into two halves, recursively sorts them,
+    and then merges the sorted halves.
+
+    Time Complexity: O(n log n)
+    Space Complexity: O(n)
+
+Q2. Compare the performance (time complexity) of Bubble Sort and Quick Sort.
+Sol:
+    Performance Comparison
+    Bubble Sort has a time complexity of O(n²) due to its nested loops. It is inefficient for large datasets
+    and is generally not used in practice for sorting large data.
+    Quick Sort has an average time complexity of O(n log n) and is more efficient than Bubble Sort.However,
+    in the worst case, its time complexity can degrade to O(n²), especially if the pivot selection is poor.
+
+
+Q3. Discuss why Quick Sort is generally preferred over Bubble Sort.
+Sol:
+    Quick Sort is Generally Preferred Over Bubble Sort because of the below reasons:-
+    Efficiency: Quick Sort is more efficient on average, with a time complexity of O(n log n). It typically
+    performs better in practice, even though its worst-case complexity is O(n²), because it can often avoid
+    this scenario with good pivot selection.
+    Scalability: Quick Sort can handle large datasets more efficiently, making it a more practical choice for
+    real-world applications.
+    Space Complexity: Although Quick Sort is not stable and uses O(log n) space, it still has better overall
+    performance characteristics compared to Bubble Sort's O(n²) time complexity.
+
+``````````````````````EXERCISE 4 `````````````````````````````````
+
+
+Q1. Explain how arrays are represented in memory and their advantages.
+
+Sol:
+    In Java, arrays are a collection of elements stored in contiguous memory locations. Each element can be
+    accessed using an index. The index starts at 0 and goes up to the length of the array minus one.
+
+    Advantages of Arrays:-
+    Constant Time Access: Since arrays use contiguous memory locations, accessing any element by its index
+    takes O(1) time.
+    Predictable Memory Usage: The size of an array is fixed, so memory usage is predictable.
+
+Q2. Analyze the time complexity of each operation (add, search, traverse, delete).
+
+Sol:
+    Time Complexity Analysis :-
+
+    Add: O(1) if the array has space, O(n) if resizing is needed.
+    Search: O(n) in the worst case, as we might have to check each element.
+    Traverse: O(n), as we visit each element.
+    Delete: O(n) in the worst case, as we might have to shift elements.
+
+Q3. Discuss the limitations of arrays and when to use them.
+
+Sol:
+    Limitations of Arrays :-
+
+    Fixed Size: Arrays can't dynamically resize; a new array must be created if more space is needed.
+    Insertion/Deletion Cost: Inserting or deleting elements can be expensive because it might involve
+    shifting elements.
+
+`````````````````````````````` EXERCISE 5 ``````````````````````````
+
+
+
+Q1. Explain the different types of linked lists (Singly Linked List, Doubly Linked List).
+
+Sol:
+    Singly Linked List
+    A singly linked list is a linear data structure consisting of nodes, where each node contains data
+    and a reference to the next node in the sequence. The list starts with a "head" node, and traversal
+    is possible in only one direction.
+
+    Doubly Linked List
+    A doubly linked list is similar to a singly linked list, but each node contains an additional reference
+    to the previous node. This allows for traversal in both directions (forward and backward).
+
+Q2. Analyze the time complexity of each operation.
+
+Sol:
+    Analysis of the time complexity:-
+    Add Task: O(1) if adding at the beginning, O(n) if adding at the end.
+    Search Task: O(n) in the worst case.
+    Traverse Tasks: O(n).
+    Delete Task: O(n) in the worst case.
+
+Q3. Discuss the advantages of linked lists over arrays for dynamic data
+
+Sol:
+    Advantages of Linked Lists over Arrays:
+
+    Dynamic Size: Linked lists can easily grow or shrink, whereas arrays have a fixed size.
+    Ease of Insertion/Deletion: Inserting or deleting elements in the middle of a linked list is generally
+    more efficient than in an array.
+
+````````````````````````````` EXERCISE 6 ```````````````````````````
+
+
+Q1. Explain linear search and binary search algorithms.
+
+Sol:
+    Linear Search:
+    Linear search is a straightforward search algorithm. It sequentially checks each element of the list until
+    it finds the target element or reaches the end of the list.
+
+    Binary Search:
+    Binary search is an efficient algorithm for finding an element in a sorted list. It works by repeatedly
+    dividing the search interval in half. If the target value is less than the middle element,
+    the search continues in the lower half; otherwise, it continues in the upper half.
+
+Q2. Compare the time complexity of linear and binary search.
+
+Sol:
+    Time Complexity Comparison:
+
+    Linear Search: Time Complexity: O(n), where n is the number of elements in the list.
+    Binary Search: Time Complexity: O(log n), where n is the number of elements in the list.
+
+Q3.	Discuss when to use each algorithm based on the data set size and order.
+
+Sol:
+    Linear Search: Best used when the list is unsorted or very small, as it does not require any
+    preprocessing like sorting.
+    Binary Search: Ideal for large datasets where the list is sorted. The efficiency of O(log n)
+    makes it much faster than linear search for large n.
+
+```````````````````````````````` EXERCISE 7 `````````````````````````````````````
+
+
+Q1.	Explain the concept of recursion and how it can simplify certain problems.
+
+Sol:
+    Understanding Recursive Algorithms :-
+    Recursion is a programming technique where a function calls itself to solve a problem.
+    It can simplify problems that can be broken down into smaller, similar sub-problems.
+    For example, calculating factorial, Fibonacci series, and certain mathematical sequences can be
+    elegantly solved using recursion.
+
+Q2.	Discuss the time complexity of your recursive algorithm.
+
+Sol:
+    Time Complexity:
+    The time complexity of the recursive algorithm is O(n), where n is the number of periods.
+    This is because the algorithm makes a recursive call for each period until it reaches the base case.
+
+Q3.  Explain how to optimize the recursive solution to avoid excessive computation.
+
+Sol:
+    Optimization:
+    Recursion can lead to excessive computation and stack overflow issues for large inputs.
+    To optimize the recursive solution, we can use memoization to store the results of sub-problems and reuse
+    them. However, for this simple financial forecasting problem, memoization might be overkill. An iterative
+    approach can also be more efficient and avoids the overhead of recursive function calls.
+

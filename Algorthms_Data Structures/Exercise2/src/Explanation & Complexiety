@@ -1,0 +1,43 @@
+Q1.	Explain Big O notation and how it helps in analyzing algorithms.
+
+Sol:
+    Big O notation is a mathematical concept used to describe the upper bound of an algorithm's time
+    or space complexity as a function of input size. It helps in analyzing the efficiency of algorithms,
+    particularly in terms of their scalability. For example, O(n) indicates that the time required grows
+    linearly with the input size, while O(log n) indicates logarithmic growth.
+
+Q2. Describe the best, average, and worst-case scenarios for search operations.
+
+Sol:
+    Best, Average, and Worst-Case Scenarios:
+
+    Best-case scenario: The minimum time an algorithm takes to complete. For search operations, this might be
+    finding the desired element at the first position.
+
+    Average-case scenario: The expected time an algorithm takes on average, assuming all inputs are equally likely.
+
+    Worst-case scenario: The maximum time an algorithm takes to complete. For search operations,
+    this is usually when the element is not present or at the last position.
+
+Q3. Compare the time complexity of linear and binary search algorithms.
+
+Sol:
+    Time Complexity:
+
+    Linear Search: O(n) in all cases (best, average, worst), where n is the number of products.
+    This is because, in the worst case, we may need to examine all elements.
+
+    Binary Search: O(log n) in the average and worst cases, and O(1) in the best case.it requires
+    the array to be sorted and allows for faster searching due to its divide-and-conquer approach.
+
+Q4. Discuss which algorithm is more suitable for your platform and why.
+
+Sol:
+    For an e-commerce platform where search speed is critical, binary search is more suitable due to its
+    logarithmic time complexity, provided that the array of products is sorted. However, if the list is
+    frequently updated or unsorted, the overhead of sorting for binary search may outweigh its benefits,
+    making linear search a better choice for dynamic datasets.
+
+    Choosing the right search algorithm depends on the specific use case and data characteristics.
+    Binary search is optimal for sorted datasets and large arrays, while linear search can be useful for
+    unsorted, small datasets or when frequent updates occur.

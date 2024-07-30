@@ -1,0 +1,29 @@
+Q1. Explain the different types of linked lists (Singly Linked List, Doubly Linked List).
+
+Sol:
+    Singly Linked List
+    A singly linked list is a linear data structure consisting of nodes, where each node contains data
+    and a reference to the next node in the sequence. The list starts with a "head" node, and traversal
+    is possible in only one direction.
+
+    Doubly Linked List
+    A doubly linked list is similar to a singly linked list, but each node contains an additional reference
+    to the previous node. This allows for traversal in both directions (forward and backward).
+
+Q2. Analyze the time complexity of each operation.
+
+Sol:
+    Analysis of the time complexity:-
+    Add Task: O(1) if adding at the beginning, O(n) if adding at the end.
+    Search Task: O(n) in the worst case.
+    Traverse Tasks: O(n).
+    Delete Task: O(n) in the worst case.
+
+Q3. Discuss the advantages of linked lists over arrays for dynamic data
+
+Sol:
+    Advantages of Linked Lists over Arrays:
+
+    Dynamic Size: Linked lists can easily grow or shrink, whereas arrays have a fixed size.
+    Ease of Insertion/Deletion: Inserting or deleting elements in the middle of a linked list is generally
+    more efficient than in an array.

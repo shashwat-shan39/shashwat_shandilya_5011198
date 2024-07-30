@@ -1,0 +1,24 @@
+Q1.	Explain the concept of recursion and how it can simplify certain problems.
+
+Sol:
+    Understanding Recursive Algorithms :-
+    Recursion is a programming technique where a function calls itself to solve a problem.
+    It can simplify problems that can be broken down into smaller, similar sub-problems.
+    For example, calculating factorial, Fibonacci series, and certain mathematical sequences can be
+    elegantly solved using recursion.
+
+Q2.	Discuss the time complexity of your recursive algorithm.
+
+Sol:
+    Time Complexity:
+    The time complexity of the recursive algorithm is O(n), where n is the number of periods.
+    This is because the algorithm makes a recursive call for each period until it reaches the base case.
+
+Q3.  Explain how to optimize the recursive solution to avoid excessive computation.
+
+Sol:
+    Optimization:
+    Recursion can lead to excessive computation and stack overflow issues for large inputs.
+    To optimize the recursive solution, we can use memoization to store the results of sub-problems and reuse
+    them. However, for this simple financial forecasting problem, memoization might be overkill. An iterative
+    approach can also be more efficient and avoids the overhead of recursive function calls.

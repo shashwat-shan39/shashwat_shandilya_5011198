@@ -1,0 +1,42 @@
+Q1. Explain why data structures and algorithms are essential in handling large inventories.
+
+Sol :
+    Efficient data structures and algorithms are crucial for handling large inventories because
+    they allow for faster data retrieval, insertion, updating, and deletion.
+    This efficiency directly impacts the performance and responsiveness of the inventory management system,
+    especially when dealing with large amounts of data.
+    Good data structures minimize memory usage and optimize the speed of these operations,
+    ensuring that the system can handle high loads and provide quick access to inventory data.
+
+Q2. Discuss the types of data structures suitable for this problem.
+
+Sol :
+    Types of data structures suitable for this problem:
+        ArrayList: Useful for maintaining an ordered list of products.Provides efficient access and modification
+                   at specific indices but can be slow for adding or removing elements in the middle of the list.
+
+        HashMap:   Ideal for key-value pairs where the key is the productId. Provides average O(1)
+                   time complexity for add, update, and delete operations. This is often the best choice for
+                   an inventory management system due to its efficiency in searching and updating records.
+
+        TreeMap:   Maintains the order of keys and provides log(n) time complexity for insertions, updates,
+                   and deletions. Useful if you need sorted data.
+
+````````````````````````  TIME COMPLEXITY  ``````````````````````````
+
+Time Complexity Analysis:
+
+Add Product:
+
+    Average Case: O(1) - HashMap provides constant-time performance for put operation.
+    Worst Case: O(n) - In case of hash collisions, where n is the number of products in the inventory.
+
+Update Product:
+
+    Average Case: O(1) - Similar to add operation, updating an existing entry is also O(1).
+    Worst Case: O(n) - Due to hash collisions.
+
+Delete Product:
+
+    Average Case: O(1) - HashMap provides constant-time performance for remove operation.
+    Worst Case: O(n) - Due to hash collisions.

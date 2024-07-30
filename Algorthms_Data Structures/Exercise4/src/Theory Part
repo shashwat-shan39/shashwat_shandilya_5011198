@@ -1,0 +1,29 @@
+Q1. Explain how arrays are represented in memory and their advantages.
+
+Sol:
+    In Java, arrays are a collection of elements stored in contiguous memory locations. Each element can be
+    accessed using an index. The index starts at 0 and goes up to the length of the array minus one.
+
+    Advantages of Arrays:-
+    Constant Time Access: Since arrays use contiguous memory locations, accessing any element by its index
+    takes O(1) time.
+    Predictable Memory Usage: The size of an array is fixed, so memory usage is predictable.
+
+Q2. Analyze the time complexity of each operation (add, search, traverse, delete).
+
+Sol:
+    Time Complexity Analysis :-
+
+    Add: O(1) if the array has space, O(n) if resizing is needed.
+    Search: O(n) in the worst case, as we might have to check each element.
+    Traverse: O(n), as we visit each element.
+    Delete: O(n) in the worst case, as we might have to shift elements.
+
+Q3. Discuss the limitations of arrays and when to use them.
+
+Sol:
+    Limitations of Arrays :-
+
+    Fixed Size: Arrays can't dynamically resize; a new array must be created if more space is needed.
+    Insertion/Deletion Cost: Inserting or deleting elements can be expensive because it might involve
+    shifting elements.
